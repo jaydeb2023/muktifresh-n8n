@@ -1,0 +1,67 @@
+services:
+  - type: web
+    name: muktifresh-n8n
+    env: docker
+    dockerImage: n8nio/n8n
+    plan: free
+    envVars:
+      - key: N8N_BASIC_AUTH_ACTIVE
+        value: "true"
+      - key: N8N_BASIC_AUTH_USER
+        value: "admin"
+      - key: N8N_BASIC_AUTH_PASSWORD
+        value: "muktifresh2026"
+      - key: N8N_HOST
+        value: "muktifresh-n8n.onrender.com"
+      - key: N8N_PROTOCOL
+        value: "https"
+      - key: WEBHOOK_URL
+        value: "https://muktifresh-n8n.onrender.com"
+      - key: GENERIC_TIMEZONE
+        value: "Asia/Kolkata"
+      - key: N8N_PORT
+        value: "5678"
+```
+```
+Scroll down
+Click: Commit changes
+Click: Commit changes (green button)
+```
+
+---
+
+### 1.4 Deploy on Render
+```
+Go to: render.com
+Click: Get Started for Free
+Sign up with GitHub (easiest)
+Allow permissions
+```
+```
+After login:
+Click: New +
+Click: Blueprint
+
+Click: Connect a repository
+Select: muktifresh-n8n
+Click: Connect
+
+Click: Apply
+
+Wait 5-7 minutes
+Render is building N8N
+```
+
+---
+
+### 1.5 Check If Working
+```
+After deploy completes
+Go to:
+https://muktifresh-n8n.onrender.com
+
+Login screen appears:
+Username: admin
+Password: muktifresh2026
+
+N8N is LIVE ✅
